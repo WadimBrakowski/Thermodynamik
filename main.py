@@ -1,5 +1,5 @@
 from calc_units import bar_to_pascal, pascal_to_bar
-import tkinter
+import tkinter as tk
 
 
 class IdealesGasgesetz:
@@ -20,15 +20,20 @@ class IdealesGasgesetz:
 def quit():
     exit(0)
 
-
 Commands = {
     "quit": quit
 }
 
 if __name__ == '__main__':
-    while True:
-        command = input(">").lower().split(" ")
-        if command[0] in Commands:
-            Commands[command[0]]()
-        else:
-            print("Was möchtest du berechnen lassen?: ")
+
+    root=tk.Tk()
+    label1=tk.Label(root,text="Hello World")
+    label1.pack()
+    root.mainloop()
+
+    # while True:
+    #     command = input(">").lower().split(" ")
+    #     if command[0] in Commands:
+    #         Commands[command[0]]()
+    #     else:
+    #         print("Was möchtest du berechnen lassen?: ")
